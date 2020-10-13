@@ -32,6 +32,7 @@ public class GuessGame {
                 userNumber != unknownNumber
         );
 
+
     }
 
     private static void saveScore(int trysCount) {
@@ -46,7 +47,21 @@ public class GuessGame {
     };
 
     public static void printBestScore (int bestScore) {
-        System.out.println("The best score of the game :" + bestScore);
+        JOptionPane.showMessageDialog(null, "Лучший результат :" + bestScore);
+        String oneMoreGame = JOptionPane.showInputDialog("Еще одну игру? Если да напиши 100 :");
+        int testOneMoreGame = Integer.parseInt(oneMoreGame);
+
+        if (testOneMoreGame == 100) {
+            GuessGame guessGame = new GuessGame();
+            String maxNumberStr = JOptionPane.showInputDialog("Введите максимальное число: ");
+            int maxNumber = Integer.parseInt(maxNumberStr);
+            guessGame.play(maxNumber);
+        }
+        else {
+            JOptionPane.showMessageDialog(null, "Пока");
+            return;
+        }
+
     }
 
 }
