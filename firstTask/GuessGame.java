@@ -59,7 +59,6 @@ public class GuessGame {
         }
         else {
             JOptionPane.showMessageDialog(null, "Пока");
-            return;
         }
 
     }

@@ -2,7 +2,6 @@ package il.study.spring.enumTask;
 
 import il.study.spring.enumTask.classes.*;
 
-
 public enum HttpCodesEnum {
     HTTP_INFORMATION(100, 199, new HttpInformationCode()),
     HTTP_SUCCESS(200, 299, new HttpSuccessCode()),
