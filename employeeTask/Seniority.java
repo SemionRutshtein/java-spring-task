@@ -15,7 +15,7 @@ public enum Seniority {
         return Arrays.stream(values())
                 .filter(seniority -> (seniority.min <= salary) && (seniority.max >= salary))
                 .findAny()
-                .get();
+                .orElseThrow(() -> new IllegalStateException("have not range for this salary"));
 
     }
 }
