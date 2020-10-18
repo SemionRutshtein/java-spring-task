@@ -1,4 +1,4 @@
-package il.study.spring.firstTask;
+package il.study.spring.first_task;
 
 import javax.swing.*;
 import java.util.*;

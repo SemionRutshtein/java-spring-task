@@ -1,4 +1,4 @@
-package il.study.spring.fridayDayTask;
+package il.study.spring.friday_day_task;
 
 import java.time.DayOfWeek;
 import java.time.LocalDate;
@@ -25,6 +25,6 @@ public class UnluckyFriday {
     }
 
     public static void main(String[] args) {
-        printUnluckyFridayDays(1850, 2020);
+        printUnluckyFridayDays(2005, 2020);
     }
 }

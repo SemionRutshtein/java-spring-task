@@ -1,6 +1,6 @@
-package il.study.spring.enumTask;
+package il.study.spring.enum_task;
 
-import il.study.spring.enumTask.classes.*;
+import il.study.spring.enum_task.classes.*;
 
 public enum HttpCodesEnum {
     HTTP_INFORMATION(100, 199, new HttpInformationCode()),

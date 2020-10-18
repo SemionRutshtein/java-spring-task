@@ -1,4 +1,4 @@
-package il.study.spring.enumTask.classes;
+package il.study.spring.enum_task.classes;
 
 public class HttpServerErrorCode implements HttpCodes {
     @Override

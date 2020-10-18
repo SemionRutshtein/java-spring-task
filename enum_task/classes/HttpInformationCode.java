@@ -1,6 +1,4 @@
-package il.study.spring.enumTask.classes;
-
-import javax.swing.*;
+package il.study.spring.enum_task.classes;
 
 public class HttpInformationCode implements HttpCodes {
     @Override

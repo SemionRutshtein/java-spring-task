@@ -1,4 +1,4 @@
-package il.study.spring.employeeTask;
+package il.study.spring.employee_task;
 
 import lombok.RequiredArgsConstructor;
 
