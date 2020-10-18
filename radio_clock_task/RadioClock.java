@@ -1,23 +1,20 @@
 package il.study.spring.radio_clock_task;
 
+import lombok.AllArgsConstructor;
+import lombok.experimental.Delegate;
+
+@AllArgsConstructor
 public class RadioClock implements Radio, AlarmClock{
-    @Override
-    public void setChannel() {
-        System.out.println("Channel was set");
-    }
 
-    @Override
-    public void setVolume() {
-        System.out.println("Volume was set");
+    @Delegate
+    private Radio radio = new RadioImpl();
 
-    }
-    @Override
-    public void setAlarmTime() {
-        System.out.println("set alarm time");
-    }
+    @Delegate(excludes = AlarmClockExclusions.class)
+    private AlarmClock alarmClock = new AlarmClockImpl();
 
-    @Override
+    @Override()
     public void stopAlarmTime() {
         System.out.println("set alarm time");
     }
+
 }
