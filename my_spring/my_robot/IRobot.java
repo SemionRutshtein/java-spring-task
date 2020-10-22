@@ -1,4 +1,4 @@
-package il.study.spring.my_spring;
+package il.study.spring.my_spring.my_robot;
 
 public class IRobot {
     private Capabilities function = new CapabilitiesImpl();
