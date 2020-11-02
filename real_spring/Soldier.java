@@ -1,17 +1,27 @@
 package il.study.spring.real_spring;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 @Data
 public class Soldier {
     private int age;
+    private String name;
+    private String secondName;
 
-    public void setAge(String age) {
-        System.out.println(age);
+    public Soldier(int age, String name, String secondName) {
+        this.age = age;
+        this.name = name;
+        this.secondName = secondName;
     }
 
-    public static void main(String[] args) {
-        ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("context.xml");
+    public Soldier() {
+
     }
+
+    public void printSoldierName () {
+        System.out.println(this);
+    }
+
 }

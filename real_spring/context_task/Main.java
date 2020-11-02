@@ -7,7 +7,6 @@ public class Main {
         ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("context.xml");
         context.getBean(ShakespeareQuoter.class).sayQuote();
         context.getBean(TerminatorQuoter.class).sayQuote();
-
         context.getBeansOfType(Quoter.class).values().forEach(Quoter::sayQuote);
 
     }
