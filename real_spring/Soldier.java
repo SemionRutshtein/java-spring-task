@@ -1,8 +1,6 @@
 package il.study.spring.real_spring;
 
-import lombok.AllArgsConstructor;
 import lombok.Data;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 @Data
 public class Soldier {
