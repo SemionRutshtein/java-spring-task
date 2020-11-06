@@ -3,7 +3,9 @@ package il.study.spring.real_spring.post_processor_task;
 import il.study.spring.my_spring.object_factory.InjectRandomIntAnnotationObjectConfigurator;
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.config.BeanPostProcessor;
+import org.springframework.stereotype.Component;
 
+@Component
 public class InjectRandomAnnotationBeanPostProcessor implements BeanPostProcessor {
 
     private InjectRandomIntAnnotationObjectConfigurator injectConfig = new InjectRandomIntAnnotationObjectConfigurator();

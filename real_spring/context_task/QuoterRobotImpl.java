@@ -1,14 +1,19 @@
 package il.study.spring.real_spring.context_task;
 
 import lombok.Data;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
 import javax.annotation.PostConstruct;
 import java.util.List;
 
 @Data
+@Component
 public class QuoterRobotImpl implements QuoterRobot {
 
-    private List<Quoter> quoters;
+    @Autowired
+    private  List<Quoter> quoters;
+
 
     @Override
     @PostConstruct

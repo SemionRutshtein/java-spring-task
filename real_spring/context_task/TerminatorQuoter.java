@@ -1,22 +1,31 @@
 package il.study.spring.real_spring.context_task;
 
 import il.study.spring.my_spring.object_factory.Benchmark;
-import lombok.Data;
-import org.springframework.scheduling.annotation.Async;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
 
-import java.util.ArrayList;
+import javax.annotation.PreDestroy;
+import java.util.Arrays;
 import java.util.List;
-@Data
+
 @Benchmark
-@DeprecatedClass(newClass = T1000.class)
+@Component
 public class TerminatorQuoter implements Quoter {
-    private List<String> messages = new ArrayList<>();
+
+    private List<String> messages;
+
+
+    @Value("Some text")
+    public void setMessages(String[] messages) {
+        this.messages = Arrays.asList(messages);
+    }
+
     @Override
     public void sayQuote() {
         messages.forEach(System.out::println);
     }
 
-    @Async
+    @PreDestroy
     public void killAll () {
         new Thread(()-> System.out.println("You are terminated")).start();
     }
