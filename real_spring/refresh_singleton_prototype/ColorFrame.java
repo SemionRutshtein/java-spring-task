@@ -13,7 +13,7 @@ import static il.study.spring.heroes_game_task.utills.RandomUtil.*;
 
 //@Scope("prototype")
 @Component
-public abstract class ColorFrame extends JFrame {
+public class ColorFrame extends JFrame {
 
     @Autowired
     private Color color;
@@ -27,10 +27,8 @@ public abstract class ColorFrame extends JFrame {
     @SneakyThrows
     public void moveToRandomLocation() {
         setLocation(getRandomInRange(0, 1200), getRandomInRange(0, 900));
-        color = getColorBean();
         getContentPane().setBackground(color);
         repaint();
     }
-    @Lookup
-    protected abstract Color getColorBean();
+
 }
