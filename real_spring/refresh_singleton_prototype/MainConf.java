@@ -1,6 +1,5 @@
 package il.study.spring.real_spring.refresh_singleton_prototype;
 
-import il.study.spring.heroes_game_task.utills.RandomUtil;
 import lombok.SneakyThrows;
 import org.springframework.context.annotation.*;
 import java.awt.*;
