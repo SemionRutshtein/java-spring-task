@@ -11,7 +11,7 @@ import javax.annotation.PreDestroy;
 import java.util.Arrays;
 
 
-@Component
+//@Component
 public class BeanDefinitionAnalyzerBeanFactoryPostProcessor implements BeanFactoryPostProcessor {
     @Override
     @SneakyThrows
@@ -20,11 +20,11 @@ public class BeanDefinitionAnalyzerBeanFactoryPostProcessor implements BeanFacto
         for (String name : names) {
             BeanDefinition beanDefinition = configurableListableBeanFactory.getBeanDefinition(name);
             String beanClassName = beanDefinition.getBeanClassName();
-            Class<?> aClass = Class.forName(beanClassName);
-            boolean annotationPresent = Arrays.stream(aClass.getMethods()).anyMatch(method -> method.isAnnotationPresent(PreDestroy.class));
-            String destroyMethodName = beanDefinition.getDestroyMethodName();
-            boolean isPrototype = beanDefinition.isPrototype();
-            if(isPrototype&(destroyMethodName!=null||annotationPresent))
+            Class<?> beanClass = Class.forName(beanClassName);
+            boolean isPredatoryMethodDefined = Arrays.stream(beanClass.getMethods()).anyMatch(method -> method.isAnnotationPresent(PreDestroy.class));
+//            String destroyMethodName = beanDefinition.getDestroyMethodName();
+//            boolean isPrototype = beanDefinition.isPrototype();
+            if(beanDefinition.isPrototype() && (isPredatoryMethodDefined || beanDefinition.getDestroyMethodName()!=null))
                 throw new IllegalStateException("Your text for error message");
         }
     }

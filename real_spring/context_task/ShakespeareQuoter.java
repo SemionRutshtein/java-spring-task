@@ -5,6 +5,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
     @Component
+    @Book
     public class ShakespeareQuoter implements Quoter {
 
     @InjectRandomInt(min = 3, max = 5)

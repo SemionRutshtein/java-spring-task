@@ -8,7 +8,7 @@ import org.springframework.beans.factory.config.BeanFactoryPostProcessor;
 import org.springframework.beans.factory.config.ConfigurableListableBeanFactory;
 import org.springframework.stereotype.Component;
 
-@Component
+//@Component
 public class DeprecatedHandlerBeanFactoryPostProcessor implements BeanFactoryPostProcessor {
 
     @Override

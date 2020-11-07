@@ -1,7 +1,6 @@
 package il.study.spring.real_spring.context_task;
 
 import lombok.Data;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.PostConstruct;
@@ -11,7 +10,7 @@ import java.util.List;
 @Component
 public class QuoterRobotImpl implements QuoterRobot {
 
-    @Autowired
+    @Book
     private  List<Quoter> quoters;
 
 
