@@ -1,4 +1,4 @@
-package il.study.spring.real_spring.bbp;
+package il.study.spring.real_spring.context_task.bbp;
 
 import il.study.spring.my_spring.object_factory.Benchmark;
 import il.study.spring.my_spring.object_factory.BenchmarkProxyConfigurator;

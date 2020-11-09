@@ -1,6 +1,7 @@
-package il.study.spring.real_spring.context_task;
+package il.study.spring.real_spring.context_task.business;
 
 import il.study.spring.my_spring.object_factory.InjectRandomInt;
+import il.study.spring.real_spring.context_task.Book;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 

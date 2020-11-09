@@ -1,11 +1,11 @@
-package il.study.spring.real_spring.context_task;
+package il.study.spring.real_spring.context_task.business;
 
 import il.study.spring.my_spring.object_factory.Benchmark;
-import org.springframework.beans.factory.annotation.Qualifier;
+import il.study.spring.real_spring.context_task.Film;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.stereotype.Component;
 
 import javax.annotation.PreDestroy;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -17,8 +17,9 @@ public class TerminatorQuoter implements Quoter {
 
 
     @Value("${terminator}")
-    public void setMessages(String[] messages) {
-        this.messages = Arrays.asList(messages);
+    public void setMessages(String[] messages, @Value("${tri}") String javaHome) {
+        System.out.println("javaHome " + javaHome);
+        this.messages = new ArrayList<>(Arrays.asList(messages));
     }
 
     @Override

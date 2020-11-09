@@ -1,8 +1,7 @@
-package il.study.spring.real_spring.bbp;
+package il.study.spring.real_spring.context_task.bbp;
 
 import il.study.spring.heroes_game_task.utills.RandomUtil;
 import org.springframework.beans.factory.FactoryBean;
-import org.springframework.stereotype.Component;
 
 public class IntegerFactory implements FactoryBean<Integer> {
 
