@@ -13,6 +13,5 @@ import java.lang.annotation.RetentionPolicy;
 @Repository
 @Autowired
 public @interface DataAnnotation {
-
     DBType value();
 }

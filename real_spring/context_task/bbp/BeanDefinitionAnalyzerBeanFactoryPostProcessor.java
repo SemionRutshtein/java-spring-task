@@ -21,8 +21,6 @@ public class BeanDefinitionAnalyzerBeanFactoryPostProcessor implements BeanFacto
             String beanClassName = beanDefinition.getBeanClassName();
             Class<?> beanClass = Class.forName(beanClassName);
             boolean isPredatoryMethodDefined = Arrays.stream(beanClass.getMethods()).anyMatch(method -> method.isAnnotationPresent(PreDestroy.class));
-//            String destroyMethodName = beanDefinition.getDestroyMethodName();
-//            boolean isPrototype = beanDefinition.isPrototype();
             if(beanDefinition.isPrototype() && (isPredatoryMethodDefined || beanDefinition.getDestroyMethodName()!=null))
                 throw new IllegalStateException("Your text for error message");
         }
